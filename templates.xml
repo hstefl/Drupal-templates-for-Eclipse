@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="newPhp" deleted="false" description="Drupal .info file" enabled="true" name="Drupal .info file">;$$id$$
+
+name = Human readable name
+description = Human readable description
+package = Custom RedWeb modules
+core = 7.x
+version = 1.0-dev
+
+files[] = ${cursor}file.module
+;files[] = file.admin.module
+
+;dependecies[] = module</template><template autoinsert="true" context="newPhp" deleted="false" description="Drupal standard file" enabled="true" name="Drupal standard file">// $$Id$$
+
+/**
+ * @file
+ * ${cursor}One sentece description.
+ *
+ * Detailed description.
+ *
+ * @author
+ *   Jan Štefl
+ *   hstefl@redweb.cz
+ *   Kozí 8, Brno, Czech republic,
+ *   www.redweb.cz
+ */
+
+</template></templates>
