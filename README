@@ -1,7 +1,8 @@
 INSTALLATION
  1. In your Eclipse installation choose: Window -> Preferences -> PHP -> Templates.
  2. Click on button Import and select templates.xml.
- 3. Enjoy.
+ 3. Fill "Drupal standard file" template with your inicitials.
+ 4. Enjoy.
 
 USAGE
  - There are two kins of Eclise templates "newPhp" and "php" in the temlate.xml.
