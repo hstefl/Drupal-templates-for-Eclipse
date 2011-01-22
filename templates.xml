@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="php" deleted="false" description="hook_block_info()" enabled="true" name="dhbi">/**
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="php" deleted="false" description="class TestCase extends DrupalWebTestCase " enabled="true" name="dctest">class ${TestCaseName} extends DrupalWebTestCase {
+  
+  public function setUp() {
+    parent::setUp();
+  }
+  
+  public function getInfo() {
+    return array(
+      'name' =&gt; t('${Name}'),
+      'description' =&gt; t('${Description}'),
+      'group' =&gt; t('${Group}'),
+    );
+  }
+  
+  public function test${TestName}() {
+    $$this-&gt;assertTrue(${expression}, t('${Success_message}.'));
+    $$this-&gt;assertEqual(${expected}, ${tested} , t('${Success_message}.'));
+  }
+}</template><template autoinsert="true" context="php" deleted="false" description="hook_block_info()" enabled="true" name="dhbi">/**
  * Implementation of hook_block_info().
  */
 function ${namespace}_block_info() {
