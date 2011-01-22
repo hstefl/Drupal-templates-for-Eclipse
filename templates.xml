@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="newPhp" deleted="false" description="Drupal .info file" enabled="true" name="Drupal .info file">;$$id$$
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="php" deleted="false" description="hook_help()" enabled="true" name="dhh">/**
+ * Implementation of hook_help().
+ * @link http://api.drupal.org/api/drupal/developer--hooks--core.php/function/hook_help/6
+ */
+function ${namespace}_help($$path, $$arg) {
+  switch ($$path) {
+    case 'admin/help#${namespace}';
+      return t('${cursor}');
+    break;
+  }
+}</template><template autoinsert="true" context="newPhp" deleted="false" description="Drupal .info file" enabled="true" name="Drupal .info file">;$$id$$
 
 name = Human readable name
 description = Human readable description
@@ -9,11 +19,12 @@ version = 1.0-dev
 files[] = ${cursor}file.module
 ;files[] = file.admin.module
 
-;dependecies[] = module</template><template autoinsert="true" context="newPhp" deleted="false" description="Drupal standard file" enabled="true" name="Drupal standard file">// $$Id$$
+;dependecies[] = module</template><template autoinsert="true" context="newPhp" deleted="false" description="Drupal standard file" enabled="true" name="Drupal standard file">&lt;?php
+// $$Id$$
 
 /**
  * @file
- * ${cursor}One sentece description.
+ * ${cursor}One sentence description.
  *
  * Detailed description.
  *
