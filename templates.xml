@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="php" deleted="false" description="hook_help()" enabled="true" name="dhh">/**
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="php" deleted="false" description="hook_block_info()" enabled="true" name="dhbi">/**
+ * Implementation of hook_block_info().
+ */
+function ${namespace}_block_info() {
+  $$blocks = array();
+  
+  $$blocks['${block_name}'] = array(
+    'info' =&gt; t('${Info}'),
+    'cache' =&gt; ${DRUPAL_NO_CACHE},
+  );
+  
+  return $$blocks;
+}</template><template autoinsert="true" context="php" deleted="false" description="hook_block_view()" enabled="true" name="dhbv">/**
+ * Implementation of hook_block_view().
+ */
+function ${namespace}_block_view($$block_name) {
+  $$block = array('subject' =&gt; '', 'content' =&gt; '');
+  
+  switch ($$block_name) {
+    case '${block_name}':
+      $$block['subject'] = t('${Subject}');
+      $$block['content'] = _${namespace}_block_${block_name}_content();
+      break;
+  }
+  
+  return $$block;
+}
+
+/**
+ * Get content for block ${block_name}.
+ */
+function _${namespace}_block_${block_name}_content() {
+	$$content = '';
+	
+	return $$content;
+}</template><template autoinsert="true" context="php" deleted="false" description="hook_help()" enabled="true" name="dhh">/**
  * Implementation of hook_help().
  * @link http://api.drupal.org/api/drupal/developer--hooks--core.php/function/hook_help/6
  */
