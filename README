@@ -1,0 +1,19 @@
+INSTALLATION
+ 1. In your Eclipse installation choose: Window -> Preferences -> PHP -> Templates.
+ 2. Click on button Import and select templates.xml.
+ 3. Enjoy.
+
+USAGE
+ - There are two kins of Eclise templates "newPhp" and "php" in the temlate.xml.
+ - NewPhp will help you create new Drupal php (Drupal standard file) and .info (Drupal .info file) files.
+ - Php contains templates for hooks, classes, etc.
+ HINT:
+   - Between predefined variables (like namespace etc.) you can switch with mouse (unfortunatelly it is not possible with Enter, If you know the solution let me know.)
+
+ CONCEPT OF DRUPAL HOOKS TEMPLATES
+  - Every template has a name. After writing of its name and pressing CTRL+SPACEBAR template will be inserted.
+  - All Drupal hooks templates has a naming convetion: It is shortcut of all first letters in a name of hook starting with "dh" (Drupal Hook).
+  - Example: 
+                       hook: hook_block_info()
+      derived template name: dhbi (Drupal Hook Block Info).
+      
